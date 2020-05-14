@@ -10,7 +10,7 @@ from datetime import datetime
 """
 class Search(db.Model):
 
-    __tablename__ = "search"
+    __tablename__ = "searches"
 
     id = db.Column(db.Integer, primary_key=True)
     search = db.Column(db.String(500))
@@ -22,3 +22,6 @@ class Search(db.Model):
 
     def __repr__(self):
         return self.search
+
+    def as_dict(self):
+        return {'search': self.search}

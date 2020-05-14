@@ -4,7 +4,7 @@
 import requests
 
 from bs4 import BeautifulSoup
-from flask import render_template, Blueprint, request, redirect, url_for
+from flask import render_template, Blueprint, request, redirect, url_for, json, jsonify
 from requests.compat import quote_plus
 
 from radzlist import db
@@ -34,14 +34,22 @@ def home():
    return render_template('base.html', form=form)
 
 
+@core.route('/searches')
+def searchdict():
+   searches = Search.query.all()
+   list_searches = [s.as_dict() for s in searches]
+   return jsonify(list_searches)
+
+
 @core.route('/search', methods=['GET', 'POST'])
 def search():
    form = SearchForm()
 
    if request.method == 'POST':
-      new = Search(search=form.search.data)
-      db.session.add(new)
-      db.session.commit()
+      if not Search.query.filter_by(search=form.search.data).first():
+         new = Search(search=form.search.data)
+         db.session.add(new)
+         db.session.commit()
 
       search = form.search.data
       form.search.data = ""
