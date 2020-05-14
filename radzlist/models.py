@@ -2,7 +2,7 @@
 ------------------------------------ Imports ------------------------------------
 """
 from datetime import datetime
-from webscrapper import db
+from radzlist import db
 
 
 """

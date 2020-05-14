@@ -1,0 +1,54 @@
+.brand-logo {
+    margin-left: 20px;
+}
+
+#icon-container {
+    margin-top: 50px;
+}
+
+#flash-on {
+    color: #d32f2f;
+}
+
+#camera {
+    color: orange;
+}
+
+#web {
+    color: blue;
+}
+
+#hearts {
+    color: #d32f2f;
+}
+
+#form-container {
+    padding: 20px;
+}
+
+.card {
+    height: 450px;
+    overflow: hidden;
+}
+
+.card-image {
+    height: 300px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    min-width: 100%;
+    min-height: 100%
+}
+
+.card .card-content {
+    height: 90px;
+    padding: 10px;
+}
+
+.card .card-action {
+    height: 60px;
+    padding: 10px;
+}

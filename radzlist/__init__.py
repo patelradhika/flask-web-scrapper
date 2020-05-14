@@ -24,3 +24,11 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 Migrate(app, db)
+
+
+"""
+---------------------------------- Blueprints -----------------------------------
+"""
+from .views import core
+
+app.register_blueprint(core)

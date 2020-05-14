@@ -1,7 +1,7 @@
 """
 ------------------------------------ Imports ------------------------------------
 """
-from webscrapper import app
+from radzlist import app
 
 
 """
