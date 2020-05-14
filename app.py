@@ -1,8 +1,11 @@
-from flask import Flask
+"""
+------------------------------------ Imports ------------------------------------
+"""
+from webscrapper import app
 
 
-app = Flask(__name__)
-
-
+"""
+------------------------------------ Run app ------------------------------------
+"""
 if __name__ == "__main__":
     app.run(debug=True)
