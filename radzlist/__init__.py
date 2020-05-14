@@ -29,6 +29,6 @@ Migrate(app, db)
 """
 ---------------------------------- Blueprints -----------------------------------
 """
-from .views import core
+from radzlist.views import core
 
 app.register_blueprint(core)

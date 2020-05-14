@@ -51,15 +51,14 @@
     </div>
 
     <div class="container" id="form-container">
-      <form action="" method="POST">
+      <form action="{{ url_for('core.search') }}" method="POST">
         <div class="input-field col s12">
-          <input id="search" type="text" name="search">
-          <label for="search">Search</label>
+          {{ form.search }}
+          {{ form.search.label }}
         </div>
 
         <div class="input-field col s12">
-          <button class="btn waves-effect waves-light" type="submit">Submit<i
-              class="material-icons right">send</i></button>
+          <button class="btn waves-effect waves-light" type="submit">Submit<i class="material-icons right">send</i></button>
         </div>
       </form>
     </div>
